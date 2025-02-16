@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: resume-analyzer-api
+    env: docker
+    buildCommand: docker build -t resume-analyzer-api .
+    startCommand: docker run -p $PORT:8000 resume-analyzer-api
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: EMAIL_API
+        sync: false
+      - key: MONGO_DB
+        sync: false
+      - key: CORS_ORIGIN
+        value: https://your-frontend-domain.com
