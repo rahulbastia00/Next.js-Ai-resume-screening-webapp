@@ -1,4 +1,4 @@
-# AI Resume Matcher - DevOps Documentation
+# AI Resume Matcher - Documentation
 
 ## 1. Overview
 AI Resume Matcher is a full-stack application that uses AI to analyze resumes and match them against job descriptions. The backend is built using FastAPI, MongoDB, and AI models, while the frontend is developed using Next.js and Tailwind CSS.
