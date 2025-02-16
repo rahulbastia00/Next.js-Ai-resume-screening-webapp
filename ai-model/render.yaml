@@ -2,6 +2,7 @@ services:
   - type: web
     name: resume-analyzer-api
     env: docker
+    rootDir: ai-model  # Add this line to specify the backend directory
     buildCommand: docker build -t resume-analyzer-api .
     startCommand: docker run -p $PORT:8000 resume-analyzer-api
     envVars:
