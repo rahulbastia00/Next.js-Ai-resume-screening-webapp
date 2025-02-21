@@ -2,7 +2,7 @@ services:
   - type: web
     name: resume-analyzer-api
     env: docker
-    rootDir: ai-model  # Add this line to specify the backend directory
+    rootDir: ai-model  # 🔥 Specify the correct directory for the Docker build
     buildCommand: docker build -t resume-analyzer-api .
     startCommand: docker run -p $PORT:8000 resume-analyzer-api
     envVars:
@@ -14,3 +14,9 @@ services:
         sync: false
       - key: CORS_ORIGIN
         value: https://your-frontend-domain.com
+      - key: PYTHON_VERSION
+        value: 3.9.0
+      - key: MODEL_NAME
+        value: llama3-70b-8192
+      - key: SENTENCE_TRANSFORMER
+        value: all-MiniLM-L6-v2
