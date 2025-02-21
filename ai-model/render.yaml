@@ -2,7 +2,7 @@ services:
   - type: web
     name: resume-analyzer-api
     env: docker
-    rootDir: ai-model  # 🔥 Specify the correct directory for the Docker build
+    rootDir: ai-model  # ✅ Set the directory where Dockerfile and requirements.txt exist
     buildCommand: docker build -t resume-analyzer-api .
     startCommand: docker run -p $PORT:8000 resume-analyzer-api
     envVars:
